@@ -5,3 +5,6 @@
 build
 logs
 
+aws_lam
+
+/aws_lambda.iws
