@@ -1,0 +1,64 @@
+#
+# https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+#
+# https://www.baeldung.com/hikaricp
+# https://www.baeldung.com/spring-boot-hikari
+# https://github.com/brettwooldridge/HikariCP/wiki/Spring-Hibernate-with-Annotations
+# http://smasue.github.io/spring-yml-datasources
+#
+datasource:
+  mariadb:
+    url: jdbc:mariadb://localhost/lambda?autoReconnect=true&tcpKeepAlive=true
+    jdbc-url: ${spring.datasource.mariadb.url}
+    username: root
+    password: root
+    driver-class-name: org.mariadb.jdbc.Driver
+  mariadb-hikari:
+    pool-name : mariadb
+    transaction-isolation :
+    idleTimeout: 300000
+    maxLifetime: 3600000
+    maximumPoolSize: 5
+    minimumIdle: 1
+    poolName: outboundengine
+    registerMbeans: false
+    leakDetectionThreshold: 30000
+
+  postgres:
+    url: jdbc:postgresql://localhost/lambda
+    jdbc-url: ${spring.datasource.postgres.url}
+    username: lambda
+    password: lambda
+    driver-class-name: org.postgresql.Driver
+  postgres-hikari:
+    pool-name : postgres
+    transaction-isolation :
+    idleTimeout: 300000
+    maxLifetime: 3600000
+    maximumPoolSize: 5
+    minimumIdle: 1
+    poolName: outboundengine
+    registerMbeans: false
+    leakDetectionThreshold: 30000
+
+  jpa:
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+        type: trace
+
+  main:
+    allow-bean-definition-overriding: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, status, loggers, logfile, metrics, mappings, scheduledtasks, env, jolokia
+    jmx:
+      exposure:
+        include: health, status,  metrics, scheduledtasks, shutdown
