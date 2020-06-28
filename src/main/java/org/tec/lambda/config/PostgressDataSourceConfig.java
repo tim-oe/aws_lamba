@@ -21,6 +21,7 @@ import java.util.HashMap;
  * https://stackoverflow.com/questions/44373186/how-to-use-hikaricp-in-spring-boot-with-two-datasources-in-conjunction-with-flyw
  * https://www.baeldung.com/the-persistence-layer-with-spring-and-jpa
  * https://medium.com/@gokuldas.puthenpurakkal/using-multiple-data-sources-using-spring-boot-2-and-spring-data-d94769383646
+ * https://github.com/gokuldas-puthenpurakkal/springboot2-multipledatasources-example
  */
 @Configuration
 @EnableJpaRepositories(
