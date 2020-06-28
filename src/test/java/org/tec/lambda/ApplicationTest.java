@@ -8,6 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import javax.sql.DataSource;
+
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -24,6 +26,14 @@ public class ApplicationTest {
     JdbcTemplate psTemplate;
 
     @Autowired
+    @Qualifier("mariadbDataSource")
+    DataSource myDataSource;
+
+    @Autowired
+    @Qualifier("postgresDataSource")
+    DataSource psDataSource;
+
+    @Autowired
     Application application;
 
     @Test
@@ -31,6 +41,8 @@ public class ApplicationTest {
         assertNotNull(application);
         assertNotNull(myTemplate);
         assertNotNull(psTemplate);
+        assertNotNull(myDataSource);
+        assertNotNull(psDataSource);
     }
 
     @Test

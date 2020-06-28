@@ -20,7 +20,6 @@ datasource:
     maxLifetime: 3600000
     maximumPoolSize: 5
     minimumIdle: 1
-    poolName: outboundengine
     registerMbeans: false
     leakDetectionThreshold: 30000
 
@@ -35,9 +34,9 @@ datasource:
     transaction-isolation :
     idleTimeout: 300000
     maxLifetime: 3600000
-    maximumPoolSize: 5
+    maximumPoolSize: 2
     minimumIdle: 1
-    poolName: outboundengine
+
     registerMbeans: false
     leakDetectionThreshold: 30000
 

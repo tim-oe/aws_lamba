@@ -2,33 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edfba93e-1a01-4fe1-820d-5ec5689d42d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_lamba.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_lamba.ipr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_lamba.iws" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_lamba.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aws_lamba.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lombok.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tec/lambda/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tec/lambda/config/MariaDBDataSourceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tec/lambda/config/PostgressDataSourceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tec/lambda/mariadb/entity/MyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tec/lambda/mariadb/repository/MyTestRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tec/lambda/postgres/entity/PsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tec/lambda/postgres/repository/PsTestRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/sql/maria/init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/sql/postgres/init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/tec/lambda/ApplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws_lamba.iws" beforeDir="false" afterPath="$PROJECT_DIR$/aws_lamba.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tec/lambda/config/MariaDBDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tec/lambda/config/MariaDBDataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tec/lambda/config/PostgressDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tec/lambda/config/PostgressDataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/tec/lambda/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tec/lambda/ApplicationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +128,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.ApplicationTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -177,6 +155,25 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="ApplicationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;org.tec.lambda.ApplicationTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -208,6 +205,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.ApplicationTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
@@ -230,8 +232,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593280922889</updated>
-      <workItem from="1593280924585" duration="32429000" />
+      <workItem from="1593280924585" duration="33982000" />
     </task>
+    <task id="LOCAL-00001" summary="initial checkin">
+      <created>1593319195033</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593319195033</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,13 +249,51 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <MESSAGE value="initial checkin" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial checkin" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="372" y="27" width="912" height="768" key="CommitChangelistDialog2" timestamp="1593319194878">
+      <screen x="67" y="27" width="1533" height="768" />
+    </state>
+    <state x="372" y="27" width="912" height="768" key="CommitChangelistDialog2/67.27.1533.768@67.27.1533.768" timestamp="1593319194878" />
     <state x="616" y="168" width="424" height="484" key="FileChooserDialogImpl" timestamp="1593314211727">
       <screen x="67" y="27" width="1533" height="768" />
     </state>
     <state x="616" y="168" width="424" height="484" key="FileChooserDialogImpl/67.27.1533.768@67.27.1533.768" timestamp="1593314211727" />
+    <state width="1487" height="43" key="GridCell.Tab.0.bottom" timestamp="1593320667310">
+      <screen x="67" y="27" width="1533" height="768" />
+    </state>
+    <state width="1487" height="43" key="GridCell.Tab.0.bottom/67.27.1533.768@67.27.1533.768" timestamp="1593320667310" />
+    <state width="1487" height="43" key="GridCell.Tab.0.center" timestamp="1593320667309">
+      <screen x="67" y="27" width="1533" height="768" />
+    </state>
+    <state width="1487" height="43" key="GridCell.Tab.0.center/67.27.1533.768@67.27.1533.768" timestamp="1593320667309" />
+    <state width="1487" height="43" key="GridCell.Tab.0.left" timestamp="1593320667306">
+      <screen x="67" y="27" width="1533" height="768" />
+    </state>
+    <state width="1487" height="43" key="GridCell.Tab.0.left/67.27.1533.768@67.27.1533.768" timestamp="1593320667306" />
+    <state width="1487" height="43" key="GridCell.Tab.0.right" timestamp="1593320667309">
+      <screen x="67" y="27" width="1533" height="768" />
+    </state>
+    <state width="1487" height="43" key="GridCell.Tab.0.right/67.27.1533.768@67.27.1533.768" timestamp="1593320667309" />
+    <state width="1487" height="43" key="GridCell.Tab.1.bottom" timestamp="1593320667150">
+      <screen x="67" y="27" width="1533" height="768" />
+    </state>
+    <state width="1487" height="43" key="GridCell.Tab.1.bottom/67.27.1533.768@67.27.1533.768" timestamp="1593320667150" />
+    <state width="1487" height="43" key="GridCell.Tab.1.center" timestamp="1593320667150">
+      <screen x="67" y="27" width="1533" height="768" />
+    </state>
+    <state width="1487" height="43" key="GridCell.Tab.1.center/67.27.1533.768@67.27.1533.768" timestamp="1593320667150" />
+    <state width="1487" height="43" key="GridCell.Tab.1.left" timestamp="1593320667150">
+      <screen x="67" y="27" width="1533" height="768" />
+    </state>
+    <state width="1487" height="43" key="GridCell.Tab.1.left/67.27.1533.768@67.27.1533.768" timestamp="1593320667150" />
+    <state width="1487" height="43" key="GridCell.Tab.1.right" timestamp="1593320667150">
+      <screen x="67" y="27" width="1533" height="768" />
+    </state>
+    <state width="1487" height="43" key="GridCell.Tab.1.right/67.27.1533.768@67.27.1533.768" timestamp="1593320667150" />
     <state x="322" y="45" key="SettingsEditor" timestamp="1593294337169">
       <screen x="67" y="27" width="1533" height="768" />
     </state>
@@ -254,5 +302,16 @@
       <screen x="67" y="27" width="1533" height="768" />
     </state>
     <state x="496" y="116" width="672" height="678" key="search.everywhere.popup/67.27.1533.768@67.27.1533.768" timestamp="1593306541351" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/tec/lambda/ApplicationTest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

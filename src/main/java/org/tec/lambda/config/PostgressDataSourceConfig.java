@@ -35,6 +35,7 @@ public class PostgressDataSourceConfig {
     }
 
     @Bean(name = "postgresDataSource")
+    @ConfigurationProperties(prefix = "datasource.postgres-hikari")
     public DataSource dataSource(@Qualifier("postgresDataSourceProperties") final DataSourceProperties dsp) {
         return dsp.
                 initializeDataSourceBuilder().

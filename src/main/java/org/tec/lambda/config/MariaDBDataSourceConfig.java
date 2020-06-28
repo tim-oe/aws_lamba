@@ -41,10 +41,11 @@ public class MariaDBDataSourceConfig {
 
     @Primary
     @Bean(name = "mariadbDataSource")
+    @ConfigurationProperties(prefix = "datasource.mariadb-hikari")
     public DataSource dataSource(@Qualifier("mariadbDataSourceProperties") final DataSourceProperties dsp) {
         return dsp.
-                initializeDataSourceBuilder().
-                type(HikariDataSource.class)
+                initializeDataSourceBuilder()
+                .type(HikariDataSource.class)
                 .build();
     }
 
