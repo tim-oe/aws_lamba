@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edfba93e-1a01-4fe1-820d-5ec5689d42d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aws_lamba.iml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_lamba.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_lamba.iws" beforeDir="false" afterPath="$PROJECT_DIR$/aws_lamba.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_lamba.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_lamba.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws_lamba.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/aws_lamba.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="edfba93e-1a01-4fe1-820d-5ec5689d42d0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -233,6 +227,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593280922889</updated>
       <workItem from="1593280924585" duration="35471000" />
+      <workItem from="1593322885858" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="initial checkin">
       <created>1593319195033</created>
