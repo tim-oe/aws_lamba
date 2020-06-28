@@ -1,3 +1,7 @@
+-- CREATE USER lambda IDENTIFIED BY 'lambda';
+-- GRANT ALL PRIVILEGES ON *.* TO 'lambda'@'%' WITH GRANT OPTION;
+-- FLUSH PRIVILEGES;
+
 CREATE TABLE my_test
 (
     id bigint(20) unsigned NOT NULL AUTO_INCREMENT,

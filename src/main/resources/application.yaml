@@ -6,12 +6,17 @@
 # https://github.com/brettwooldridge/HikariCP/wiki/Spring-Hibernate-with-Annotations
 # http://smasue.github.io/spring-yml-datasources
 #
+spring:
+  data:
+    mongodb:
+      uri: mongodb://lambda:lambda@localhost:27017/lambda?authSource=admin&authMechanism=SCRAM-SHA-256
+
 datasource:
   mariadb:
     url: jdbc:mariadb://localhost/lambda?autoReconnect=true&tcpKeepAlive=true
     jdbc-url: ${spring.datasource.mariadb.url}
-    username: root
-    password: root
+    username: lambda
+    password: lambda
     driver-class-name: org.mariadb.jdbc.Driver
   mariadb-hikari:
     pool-name : mariadb

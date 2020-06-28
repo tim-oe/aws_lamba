@@ -1,10 +1,14 @@
 package org.tec.lambda;
 
+import org.bson.BsonDocument;
+import org.bson.BsonString;
+import org.bson.Document;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -34,6 +38,9 @@ public class ApplicationTest {
     DataSource psDataSource;
 
     @Autowired
+    MongoTemplate mongoTemplate;
+
+    @Autowired
     Application application;
 
     @Test
@@ -43,6 +50,7 @@ public class ApplicationTest {
         assertNotNull(psTemplate);
         assertNotNull(myDataSource);
         assertNotNull(psDataSource);
+        assertNotNull(mongoTemplate);
     }
 
     @Test
@@ -56,5 +64,13 @@ public class ApplicationTest {
         assertNotNull(psVersion);
         assertTrue(psVersion.contains("PostgreSQL"));
         System.out.println(psVersion);
+
+        Document doc = mongoTemplate.getDb().runCommand(new BsonDocument("buildinfo", new BsonString("")));
+
+        System.out.println(doc.get("version"));
+
+        for (String collection : mongoTemplate.getCollectionNames()) {
+            System.out.println(collection);
+        }
     }
 }
