@@ -4,6 +4,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'org.springframework.boot' version '2.3.1.RELEASE'
     id "io.freefair.lombok" version "5.1.0"
+    id 'net.nemerosa.versioning' version '2.12.1'
 
     id "com.github.spotbugs" version "4.4.3"
     id 'pmd'
@@ -24,9 +25,25 @@ repositories {
     }
 }
 
+versioning {
+    scm = 'git'
+}
+
 bootJar {
     mainClassName = 'org.tec.lambda.Application'
+    manifest {
+        attributes(
+                'Built-By'       : System.properties['user.name'],
+                'Build-Timestamp': new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format(new Date()),
+                'Build-Revision' : versioning.info.full,
+                'Build-Hash'     : versioning.info.commit,
+                'Created-By'     : "Gradle ${gradle.gradleVersion}",
+                'Build-Jdk'      : "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})",
+                'Build-OS'       : "${System.properties['os.name']} ${System.properties['os.arch']} ${System.properties['os.version']}"
+        )
+    }
 }
+bootJar.dependsOn versionDisplay
 
 spotbugs {
     ignoreFailures = false
@@ -89,7 +106,7 @@ sourceCompatibility = '1.14'
 targetCompatibility = '1.14'
 
 group 'com.outboundengine'
-version '1.0-SNAPSHOT'
+version = versioning.info.full
 
 dependencies {
 
