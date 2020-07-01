@@ -49,7 +49,6 @@ public class PostgressDataSourceConfig {
         return new JdbcTemplate(ds);
     }
 
-
     @Bean(name = "postgresEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(
             final EntityManagerFactoryBuilder builder,

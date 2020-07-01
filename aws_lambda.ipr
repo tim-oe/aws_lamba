@@ -161,24 +161,6 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.spotbugs/spotbugs-annotations/4.0.6/f0b58a97c071884943ad5c48747a915f474f8fe6/spotbugs-annotations-4.0.6-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ulisesbocchio/jasypt-spring-boot-starter/3.0.2/5f0ba437f5c9b78258dfdd3887868a986a5bd356/jasypt-spring-boot-starter-3.0.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ulisesbocchio/jasypt-spring-boot-starter/3.0.2/ba5529f7f0f96a8f52a50b6fa3577fbafb7b5ca3/jasypt-spring-boot-starter-3.0.2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.github.ulisesbocchio:jasypt-spring-boot:3.0.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ulisesbocchio/jasypt-spring-boot/3.0.2/3d1aac8a160961695355948f6763dc721bd87350/jasypt-spring-boot-3.0.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ulisesbocchio/jasypt-spring-boot/3.0.2/87c267e6e47c4d33edae937aae439d5c62ca0635/jasypt-spring-boot-3.0.2-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Gradle: com.google.code.findbugs:jsr305:3.0.2">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar!/" />
@@ -422,15 +404,6 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.4.17.Final/7cebe3272d465efc2292ea82f326ae0ccce8d12/hibernate-core-5.4.17.Final-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: org.jasypt:jasypt:1.9.3">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jasypt/jasypt/1.9.3/d99ef9540f51c617f2a293b460f025d2ee563dd/jasypt-1.9.3.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jasypt/jasypt/1.9.3/9fe5c909addd00e1f3c27af8b64e22ee98922dcc/jasypt-1.9.3-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Gradle: org.javassist:javassist:3.24.0-GA">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.24.0-GA/d7466fc2e3af7c023e95c510f06448ad29b225b3/javassist-3.24.0-GA.jar!/" />
@@ -548,22 +521,65 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-junit-jupiter/3.3.3/b269eba4bd6994b8b201a75698d5b2cfc28c6dc3/mockito-junit-jupiter-3.3.3-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: org.mongodb:mongo-java-driver:3.11.0">
+    <library name="Gradle: org.mongodb:bson:4.0.4">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.11.0/71f28e91f0abac27db9e5aadce8e8317acea0054/mongo-java-driver-3.11.0.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/bson/4.0.4/4d9b48a463d10688fcd3c6dde8a76bfb9425f967/bson-4.0.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.11.0/12459eb1822ffc233b243682dd38aa4a6500d8f3/mongo-java-driver-3.11.0-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/bson/4.0.4/84101c2876a51304b9af906d4b3543462bc023e7/bson-4.0.4-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: org.mongodb:mongo-java-driver:3.8.2">
+    <library name="Gradle: org.mongodb:mongodb-driver-core:4.0.4">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.8.2/29fb01c26674c1a0f763e25623b2a1e4f4afd7b/mongo-java-driver-3.8.2.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-core/4.0.4/b7fab8d7def083e8e33660995a4c34855eebdd60/mongodb-driver-core-4.0.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.8.2/bd093ee2210e73f63719ca25ec14e0bdc0d2048f/mongo-java-driver-3.8.2-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-core/4.0.4/ec46ab06c8ff527fe8fe5f087a6ccc4ebf2668ca/mongodb-driver-core-4.0.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.mongodb:mongodb-driver-sync:4.0.4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-sync/4.0.4/3f1538a82a5a8ba8d41f22dd61bb17b30f1a9407/mongodb-driver-sync-4.0.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-sync/4.0.4/5fd846eef056a8ceeb0002d518ba9f6f01391129/mongodb-driver-sync-4.0.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:2.1.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis.spring.boot/mybatis-spring-boot-autoconfigure/2.1.3/d6d3c521bb91ec2c783fb8ddc56460a69df5e462/mybatis-spring-boot-autoconfigure-2.1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis.spring.boot/mybatis-spring-boot-autoconfigure/2.1.3/8efde32bfd053622817f3169d5d281e45c90ac46/mybatis-spring-boot-autoconfigure-2.1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis.spring.boot/mybatis-spring-boot-starter/2.1.3/7f4904f050c7f1393cf98fd2316c2587496a0b75/mybatis-spring-boot-starter-2.1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: org.mybatis:mybatis-spring:2.0.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.5/3bfeffacf579b7f607486c1cd32224643102c316/mybatis-spring-2.0.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.5/5fbf42d81e0d8abd6f09f5843b182bbe1b254ca6/mybatis-spring-2.0.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.mybatis:mybatis:3.5.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.5.5/1c8974cdec88c9259b6fa21147ea4538216e447/mybatis-3.5.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.5.5/e47e37cfedc198079ef72ff84ca7563371e2828e/mybatis-3.5.5-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.objenesis:objenesis:2.6">
@@ -674,6 +690,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/2.3.1.RELEASE/d3343386d461c3bc9a959ffadacfa401ca2feb2/spring-boot-starter-data-jpa-2.3.1.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: org.springframework.boot:spring-boot-starter-data-mongodb:2.3.1.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-mongodb/2.3.1.RELEASE/73bb8d9b6b21f13ae042f9173a91dfb21f52442/spring-boot-starter-data-mongodb-2.3.1.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-mongodb/2.3.1.RELEASE/2c13eec275d6d92e566e4c0aad0b333d14cae9eb/spring-boot-starter-data-mongodb-2.3.1.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: org.springframework.boot:spring-boot-starter-jdbc:2.3.1.RELEASE">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/2.3.1.RELEASE/800b64e76588ea88761ad9108cde762204805d66/spring-boot-starter-jdbc-2.3.1.RELEASE.jar!/" />
@@ -755,13 +780,13 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.3.1.RELEASE/d94089457932954ddbe60f8dad10628c52eced8d/spring-data-jpa-2.3.1.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: org.springframework.data:spring-data-mongodb:2.1.10.RELEASE">
+    <library name="Gradle: org.springframework.data:spring-data-mongodb:3.0.1.RELEASE">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/2.1.10.RELEASE/8095e89d7fa4ae975f7b85d2deadaf52fd6b54af/spring-data-mongodb-2.1.10.RELEASE.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/3.0.1.RELEASE/24961d107813268bb9cd3daa8d4a9389060faea7/spring-data-mongodb-3.0.1.RELEASE.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/2.1.10.RELEASE/1c9e2c3bf9c284b432045a591e7953a098c7d9b5/spring-data-mongodb-2.1.10.RELEASE-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/3.0.1.RELEASE/d75852cdea645901d7ed1e1f4ecbfca2a35e0ebb/spring-data-mongodb-3.0.1.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.springframework:spring-aop:5.2.7.RELEASE">

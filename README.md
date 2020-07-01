@@ -7,3 +7,4 @@
 - [create postgres db and user](https://medium.com/coding-blocks/creating-user-database-and-adding-access-on-postgresql-8bfcd2f4a91e)
 - [multi dastasource](https://github.com/gokuldas-puthenpurakkal/springboot2-multipledatasources-example)
 - [mongodb repository](https://docs.spring.io/spring-data/mongodb/docs/1.2.0.RELEASE/reference/html/mongo.repositories.html)
+- [mybatis]()
