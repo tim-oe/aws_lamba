@@ -1,11 +1,11 @@
-use lambda;
-db.createCollection("lambda");
-db.lambda.createIndex({"name":1}, { unique: true } );
+use multi;
+db.createCollection("multi");
+db.multi.createIndex({"name":1}, { unique: true } );
 // use admin;
-// db.createUser(
-//     {
-//         user: "lambda",
-//         pwd: "lambda",
-//         roles: [ { role: "readWrite", db: "lambda" } ]
-//     }
-// );
+db.createUser(
+    {
+        user: "multi",
+        pwd: "multi",
+        roles: [ { role: "readWrite", db: "multi" } ]
+    }
+);

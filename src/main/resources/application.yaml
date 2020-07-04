@@ -9,14 +9,14 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://lambda:lambda@localhost:27017/lambda?authSource=admin&authMechanism=SCRAM-SHA-256
+      uri: mongodb://multi:multi@localhost:27017/multi?authSource=admin&authMechanism=SCRAM-SHA-256
 
 datasource:
   mariadb:
-    url: jdbc:mariadb://localhost/lambda?autoReconnect=true&tcpKeepAlive=true
+    url: jdbc:mariadb://localhost/multi?autoReconnect=true&tcpKeepAlive=true
     jdbc-url: ${spring.datasource.mariadb.url}
-    username: lambda
-    password: lambda
+    username: multi
+    password: multi
     driver-class-name: org.mariadb.jdbc.Driver
   mariadb-hikari:
     pool-name : mariadb
@@ -29,10 +29,10 @@ datasource:
     leakDetectionThreshold: 30000
 
   postgres:
-    url: jdbc:postgresql://localhost/lambda
+    url: jdbc:postgresql://localhost/multi
     jdbc-url: ${spring.datasource.postgres.url}
-    username: lambda
-    password: lambda
+    username: multi
+    password: multi
     driver-class-name: org.postgresql.Driver
   postgres-hikari:
     pool-name : postgres

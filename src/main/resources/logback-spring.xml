@@ -98,7 +98,7 @@ see https://www.baeldung.com/spring-boot-logging
     </logger>
 
     <!-- my stuff -->
-    <logger name="org.tec.lambda" level="debug" additivity="false">
+    <logger name="org.tec.multistore" level="debug" additivity="false">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </logger>
