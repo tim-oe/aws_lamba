@@ -1,23 +1,21 @@
 package org.tec.multistore.config;
 
 import com.zaxxer.hikari.HikariDataSource;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
-import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.util.HashMap;
 
 /**
  * https://stackoverflow.com/questions/44373186/how-to-use-hikaricp-in-spring-boot-with-two-datasources-in-conjunction-with-flyw
@@ -25,11 +23,12 @@ import java.util.HashMap;
  */
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(
-        entityManagerFactoryRef = "mariadbEntityManagerFactory",
-        transactionManagerRef = "mariadbTransactionManager",
-        basePackages = {"org.tec.multistore.mariadb.repository"})
+@MapperScan(
+        basePackages = {"org.tec.multistore.mariadb.repository"},
+        sqlSessionTemplateRef  = "mariadbSessionTemplate")
 public class MariaDBDataSourceConfig {
+    private static final String DATASOURCE_BEAN_NAME = "mariadbDataSource";
+
     @Primary
     @Bean(name = "mariadbDataSourceProperties")
     @ConfigurationProperties("datasource.mariadb")
@@ -38,7 +37,7 @@ public class MariaDBDataSourceConfig {
     }
 
     @Primary
-    @Bean(name = "mariadbDataSource")
+    @Bean(name = DATASOURCE_BEAN_NAME)
     @ConfigurationProperties(prefix = "datasource.mariadb-hikari")
     public DataSource dataSource(@Qualifier("mariadbDataSourceProperties") final DataSourceProperties dsp) {
         return dsp.
@@ -53,27 +52,23 @@ public class MariaDBDataSourceConfig {
         return new JdbcTemplate(ds);
     }
 
+    @Bean(name = "mariadbSessionFactory")
     @Primary
-    @Bean(name = "mariadbEntityManagerFactory")
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(
-            final EntityManagerFactoryBuilder builder,
-            @Qualifier("mariadbDataSource") final DataSource ds) {
-
-        final HashMap<String, Object> properties = new HashMap<>();
-        properties.put("hibernate.dialect", "org.hibernate.dialect.MariaDBDialect");
-
-        return builder
-                .dataSource(ds)
-                .packages("org.tec.multistore.mariadb.entity")
-                .properties(properties)
-                .persistenceUnit("mariadb")
-                .build();
+    public SqlSessionFactory mariadbSessionFactory(@Qualifier(DATASOURCE_BEAN_NAME) final DataSource ds) throws Exception {
+        final SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+        bean.setDataSource(ds);
+        return bean.getObject();
     }
 
-    @Primary
     @Bean(name = "mariadbTransactionManager")
-    public PlatformTransactionManager transactionManager(
-            @Qualifier("mariadbEntityManagerFactory") final EntityManagerFactory emf) {
-        return new JpaTransactionManager(emf);
+    @Primary
+    public DataSourceTransactionManager mariadbTransactionManager(@Qualifier(DATASOURCE_BEAN_NAME) final DataSource ds) {
+        return new DataSourceTransactionManager(ds);
+    }
+
+    @Bean(name = "mariadbSessionTemplate")
+    @Primary
+    public SqlSessionTemplate mariadbSessionTemplate(@Qualifier("mariadbSessionFactory") final SqlSessionFactory sqlSessionFactory) {
+        return new SqlSessionTemplate(sqlSessionFactory);
     }
 }

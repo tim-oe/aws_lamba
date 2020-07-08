@@ -1,21 +1,19 @@
 package org.tec.multistore.config;
 
 import com.zaxxer.hikari.HikariDataSource;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
-import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
-import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.util.HashMap;
 
 /**
  * https://stackoverflow.com/questions/44373186/how-to-use-hikaricp-in-spring-boot-with-two-datasources-in-conjunction-with-flyw
@@ -24,18 +22,19 @@ import java.util.HashMap;
  * https://github.com/gokuldas-puthenpurakkal/springboot2-multipledatasources-example
  */
 @Configuration
-@EnableJpaRepositories(
-        entityManagerFactoryRef = "postgresEntityManagerFactory",
-        transactionManagerRef = "postgresTransactionManager",
-        basePackages = {"org.tec.multistore.postgres.repository"})
+@MapperScan(
+        basePackages = {"org.tec.multistore.postgres.repository"},
+        sqlSessionTemplateRef  = "postgresSessionTemplate")
 public class PostgressDataSourceConfig {
+    private static final String DATASOURCE_BEAN_NAME = "postgresDataSource";
+
     @Bean(name = "postgresDataSourceProperties")
     @ConfigurationProperties("datasource.postgres")
     public DataSourceProperties dataSourceProperties() {
         return new DataSourceProperties();
     }
 
-    @Bean(name = "postgresDataSource")
+    @Bean(name = DATASOURCE_BEAN_NAME)
     @ConfigurationProperties(prefix = "datasource.postgres-hikari")
     public DataSource dataSource(@Qualifier("postgresDataSourceProperties") final DataSourceProperties dsp) {
         return dsp.
@@ -48,26 +47,20 @@ public class PostgressDataSourceConfig {
     public JdbcTemplate jdbcTemplate(@Qualifier("postgresDataSource") final DataSource ds){
         return new JdbcTemplate(ds);
     }
-
-    @Bean(name = "postgresEntityManagerFactory")
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(
-            final EntityManagerFactoryBuilder builder,
-            @Qualifier("postgresDataSource") final DataSource ds) {
-
-        final HashMap<String, Object> properties = new HashMap<>();
-        properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQL82Dialect");
-
-        return builder
-                .dataSource(ds)
-                .packages("org.tec.multistore.postgres.entity")
-                .properties(properties)
-                .persistenceUnit("postgres")
-                .build();
+    @Bean(name = "postgresSessionFactory")
+    public SqlSessionFactory postgresSessionFactory(@Qualifier(DATASOURCE_BEAN_NAME) final DataSource ds) throws Exception {
+        final SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+        bean.setDataSource(ds);
+        return bean.getObject();
     }
 
     @Bean(name = "postgresTransactionManager")
-    public PlatformTransactionManager transactionManager(
-            @Qualifier("postgresEntityManagerFactory") final EntityManagerFactory emf) {
-        return new JpaTransactionManager(emf);
+    public DataSourceTransactionManager postgresTransactionManager(@Qualifier(DATASOURCE_BEAN_NAME) final DataSource ds) {
+        return new DataSourceTransactionManager(ds);
+    }
+
+    @Bean(name = "postgresSessionTemplate")
+    public SqlSessionTemplate postgresSessionTemplate(@Qualifier("postgresSessionFactory") final SqlSessionFactory sqlSessionFactory) {
+        return new SqlSessionTemplate(sqlSessionFactory);
     }
 }

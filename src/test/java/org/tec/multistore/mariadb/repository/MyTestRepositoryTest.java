@@ -9,10 +9,11 @@ import org.tec.multistore.Application;
 import org.tec.multistore.mariadb.entity.MyTest;
 
 import javax.transaction.Transactional;
-import java.time.ZonedDateTime;
-import java.util.Optional;
+import java.time.OffsetDateTime;
+import java.time.temporal.ChronoUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(SpringExtension.class)
@@ -27,16 +28,17 @@ public class MyTestRepositoryTest {
         MyTest t = new MyTest();
         t.setName("name");
         t.setValue("value");
-        t.setCreatedOn(ZonedDateTime.now());
+        //mybaic not storing precision
+        t.setCreatedOn(OffsetDateTime.now().truncatedTo(ChronoUnit.SECONDS));
 
         myTestRepository.save(t);
 
         assertTrue(t.getId() > 0);
 
-        Optional<MyTest> actual = myTestRepository.findByName(t.getName());
+        MyTest actual = myTestRepository.findByName(t.getName());
 
-        assertTrue(actual.isPresent());
+        assertNotNull(actual);
 
-        assertEquals(t, actual.get());
+        assertEquals(t, actual);
     }
 }

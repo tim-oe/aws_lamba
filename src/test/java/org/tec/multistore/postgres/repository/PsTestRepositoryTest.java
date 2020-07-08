@@ -11,10 +11,11 @@ import org.tec.multistore.Application;
 import org.tec.multistore.postgres.entity.PsTest;
 
 import javax.transaction.Transactional;
-import java.time.ZonedDateTime;
-import java.util.Optional;
+import java.time.OffsetDateTime;
+import java.time.temporal.ChronoUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(SpringExtension.class)
@@ -36,16 +37,16 @@ public class PsTestRepositoryTest {
         PsTest t = new PsTest();
         t.setName("name");
         t.setValue("value");
-        t.setCreatedOn(ZonedDateTime.now());
+        t.setCreatedOn(OffsetDateTime.now().truncatedTo(ChronoUnit.SECONDS));
 
         psTestRepository.save(t);
 
         assertTrue(t.getId() > 0);
 
-        Optional<PsTest> actual = psTestRepository.findByName(t.getName());
+        PsTest actual = psTestRepository.findByName(t.getName());
 
-        assertTrue(actual.isPresent());
+        assertNotNull(actual);
 
-        assertEquals(t, actual.get());
+        assertEquals(t, actual);
     }
 }

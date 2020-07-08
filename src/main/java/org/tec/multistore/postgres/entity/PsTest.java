@@ -12,7 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
 
 @Getter
 @Setter
@@ -37,5 +37,5 @@ public class PsTest {
 
     @Column(name="created_on", updatable=false, nullable=false)
     //@Temporal(TemporalType.TIMESTAMP)
-    private ZonedDateTime createdOn;
+    private OffsetDateTime createdOn;
 }
