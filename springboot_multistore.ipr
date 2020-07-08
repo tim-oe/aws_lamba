@@ -267,33 +267,6 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.2.3/3ebabe69eba0196af9ad3a814f723fb720b9101e/logback-core-1.2.3-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.11.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.11.0/c626020ae55d19c690d25cb51c1532ba76e5890f/jackson-annotations-2.11.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.11.0/1e90e40f81ac3a9b2f78061bea06c0a8606ddb8c/jackson-annotations-2.11.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.fasterxml.jackson.core:jackson-core:2.11.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.11.0/f84302e14648f9f63c0c73951054aeb2ff0b810a/jackson-core-2.11.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.11.0/db11b8a7990ea15aae03e842c42475771926ea5d/jackson-core-2.11.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.11.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.11.1/f5d24a1dcf46000316d40c8c61196c48dd5677c5/jackson-databind-2.11.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.11.1/d004e9fc776bb13c7a9ef552df383994d8dd8be5/jackson-databind-2.11.1-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Gradle: com.fasterxml:classmate:1.5.1">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.5.1/3fe0bed568c62df5e89f4f174c101eab25345b6c/classmate-1.5.1.jar!/" />

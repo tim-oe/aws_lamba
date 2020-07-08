@@ -9,7 +9,7 @@ import org.tec.multistore.Application;
 import org.tec.multistore.mariadb.entity.MyTest;
 
 import javax.transaction.Transactional;
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +27,7 @@ public class MyTestRepositoryTest {
         MyTest t = new MyTest();
         t.setName("name");
         t.setValue("value");
-        t.setCreatedOn(ZonedDateTime.now());
+        t.setCreatedOn(OffsetDateTime.now());
 
         myTestRepository.save(t);
 

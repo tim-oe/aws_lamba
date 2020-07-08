@@ -11,7 +11,7 @@ import org.tec.multistore.Application;
 import org.tec.multistore.postgres.entity.PsTest;
 
 import javax.transaction.Transactional;
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +36,7 @@ public class PsTestRepositoryTest {
         PsTest t = new PsTest();
         t.setName("name");
         t.setValue("value");
-        t.setCreatedOn(ZonedDateTime.now());
+        t.setCreatedOn(OffsetDateTime.now());
 
         psTestRepository.save(t);
 
