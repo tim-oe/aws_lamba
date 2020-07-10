@@ -12,7 +12,6 @@ import org.tec.multistore.postgres.entity.PsTest;
 
 import javax.transaction.Transactional;
 import java.time.OffsetDateTime;
-import java.time.temporal.ChronoUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -37,7 +36,8 @@ public class PsTestRepositoryTest {
         PsTest t = new PsTest();
         t.setName("name");
         t.setValue("value");
-        t.setCreatedOn(OffsetDateTime.now().truncatedTo(ChronoUnit.SECONDS));
+        //t.setCreatedOn(OffsetDateTime.now().truncatedTo(ChronoUnit.SECONDS));
+        t.setCreatedOn(OffsetDateTime.now());
 
         psTestRepository.save(t);
 

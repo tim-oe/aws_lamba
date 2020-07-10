@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9755eb88-a1b9-4f7e-8078-dda14a468cc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot_multistore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_multistore.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot_multistore.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_multistore.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot_multistore.iws" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_multistore.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot_multistore.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_multistore.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot_multistore.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_multistore.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tec/multistore/config/MariaDBDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tec/multistore/config/MariaDBDataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tec/multistore/config/PostgressDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tec/multistore/config/PostgressDataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tec/multistore/mariadb/entity/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tec/multistore/mariadb/entity/MyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tec/multistore/mariadb/repository/MyTestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tec/multistore/mariadb/repository/MyTestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tec/multistore/postgres/entity/PsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tec/multistore/postgres/entity/PsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/tec/multistore/postgres/repository/PsTestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tec/multistore/postgres/repository/PsTestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/sql/maria/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/maria/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/sql/postgres/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/postgres/init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/tec/multistore/mariadb/repository/MyTestRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tec/multistore/mariadb/repository/MyTestRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/tec/multistore/postgres/repository/PsTestRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tec/multistore/postgres/repository/PsTestRepositoryTest.java" afterDir="false" />
     </list>
@@ -129,7 +125,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -212,6 +211,8 @@
       <option name="presentableId" value="Default" />
       <updated>1593826379846</updated>
       <workItem from="1593826381365" duration="13154000" />
+      <workItem from="1594243161380" duration="2886000" />
+      <workItem from="1594338350851" duration="694000" />
     </task>
     <task id="LOCAL-00001" summary="added created_on column project rename">
       <created>1593837989747</created>
@@ -253,13 +254,13 @@
       <screen x="67" y="27" width="1533" height="768" />
     </state>
     <state x="167" y="125" width="1333" height="570" key="DiffContextDialog/67.27.1533.768@67.27.1533.768" timestamp="1593842067765" />
-    <state x="322" y="45" key="SettingsEditor" timestamp="1593830363884">
+    <state x="322" y="27" width="1024" height="768" key="SettingsEditor" timestamp="1594402949568">
       <screen x="67" y="27" width="1533" height="768" />
     </state>
-    <state x="322" y="45" key="SettingsEditor/67.27.1533.768@67.27.1533.768" timestamp="1593830363884" />
-    <state x="496" y="116" width="672" height="678" key="search.everywhere.popup" timestamp="1593838489340">
+    <state x="322" y="27" width="1024" height="768" key="SettingsEditor/67.27.1533.768@67.27.1533.768" timestamp="1594402949568" />
+    <state x="496" y="116" width="672" height="678" key="search.everywhere.popup" timestamp="1594243022166">
       <screen x="67" y="27" width="1533" height="768" />
     </state>
-    <state x="496" y="116" width="672" height="678" key="search.everywhere.popup/67.27.1533.768@67.27.1533.768" timestamp="1593838489340" />
+    <state x="496" y="116" width="672" height="678" key="search.everywhere.popup/67.27.1533.768@67.27.1533.768" timestamp="1594243022166" />
   </component>
 </project>

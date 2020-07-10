@@ -10,7 +10,6 @@ import org.tec.multistore.mariadb.entity.MyTest;
 
 import javax.transaction.Transactional;
 import java.time.OffsetDateTime;
-import java.time.temporal.ChronoUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -28,8 +27,7 @@ public class MyTestRepositoryTest {
         MyTest t = new MyTest();
         t.setName("name");
         t.setValue("value");
-        //mybaic not storing precision
-        t.setCreatedOn(OffsetDateTime.now().truncatedTo(ChronoUnit.SECONDS));
+        t.setCreatedOn(OffsetDateTime.now());
 
         myTestRepository.save(t);
 
