@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9755eb88-a1b9-4f7e-8078-dda14a468cc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/springboot_multistore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_multistore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot_multistore.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_multistore.ipr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot_multistore.iws" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_multistore.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot_multistore.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_multistore.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot_multistore.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_multistore.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tec/multistore/mariadb/entity/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tec/multistore/mariadb/entity/MyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tec/multistore/postgres/entity/PsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tec/multistore/postgres/entity/PsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tec/multistore/mariadb/repository/MyTestRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tec/multistore/mariadb/repository/MyTestRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/tec/multistore/postgres/repository/PsTestRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/tec/multistore/postgres/repository/PsTestRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/sql/maria/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/maria/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/sql/postgres/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/postgres/init.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
